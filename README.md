@@ -1,8 +1,7 @@
 # Bookstore
 ## Introduction
 ---
-
-This is a very basic application that is built using the MERS stack.
+This is a very basic application that is built using the MERN stack.
 
 ## Technologies used
 ---
