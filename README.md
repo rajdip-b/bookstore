@@ -16,13 +16,14 @@ This is a very basic application that is built using the MERN stack.
     ```
     Note that you might need to run it as sude if you are in Linux or MacOS
 
-- Then for the server, we need to run 2 commands simultaneously
+- Then for the server, we need to run 2 commands in 2 terminals simultaneously the first command in the first terminal after going into the backend directory is -
+    
     ```
     npx tsc -w 
     npm start
     ```
-
-- Finally, we start the frontend using
+- Finally, the second command in the second terminal after going into the frontend directory, we start the frontend using
+   
     ```
     npm run dev
     ```
