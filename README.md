@@ -74,7 +74,7 @@ This is a very basic application that is built using the MERN stack.
         npm install
         ```
 
-    - Then for the server, we need to run 2 commands simultaneously
+    - Then for the server, run
         ```
         npm run dev
         ```
