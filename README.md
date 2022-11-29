@@ -1,10 +1,8 @@
 # Bookstore
 ## Introduction
----
 This is a very basic application that is built using the MERN stack.
 
 ## Technologies used
----
 
 - ReactJS
 - ExpressJS
@@ -13,7 +11,6 @@ This is a very basic application that is built using the MERN stack.
 - ReduxJS
 
 ## Steps to run
----
 
 - ### **Running the entire app in docker**
 
