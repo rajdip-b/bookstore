@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon build/index.js"
+    "start": "nodemon build/index.js",
+    "serve": "npx tsc && node build/index.js"
   },
   "keywords": [],
   "author": "Rajdip Bhattacharya",

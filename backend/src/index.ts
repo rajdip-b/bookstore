@@ -7,17 +7,8 @@ import { bookRouterPrivate } from './routes/book-private';
 import { bookRouterPublic } from './routes/book-public';
 import cors, { CorsOptions } from 'cors';
 
-const allowCrossDomain: RequestHandler = function (req, res, next) {
-	console.log('allowCrossDomain');
-	res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
-	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-	res.header('Access-Control-Allow-Headers', 'Content-Type,authorization,app-token');
-	res.header('Access-Control-Allow-Credentials', 'true');
-	next();
-};
-
 const corsOptions: CorsOptions = {
-	origin: 'http://localhost:5173',
+	origin: 'http://localhost:3000',
 	credentials: true,
 	allowedHeaders: ['Content-Type', 'Authorization'],
 	exposedHeaders: ['Content-Type', 'Authorization'],
@@ -25,7 +16,7 @@ const corsOptions: CorsOptions = {
 };
 
 mongoose
-	.connect('mongodb://root:root@127.0.0.1:27017')
+	.connect('mongodb://root:root@db:27017')
 	.then(() => {
 		console.log('Connected to MongoDB');
 		const app = express();

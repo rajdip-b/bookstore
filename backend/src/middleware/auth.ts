@@ -5,12 +5,10 @@ import { User } from '../database/user/user.model';
 import { IUserDocument } from '../database/user/user.types';
 
 export const auth: RequestHandler<never, any, { userId: string }> = (req, res, next) => {
-	console.log(req.headers);
 	const authHeader = req.headers['authorization'];
 	const token = authHeader && authHeader.split(' ')[1];
 	if (token === null) res.status(403).send({ error: 'No token provided' });
 	jwt.verify(token!, JWT_SECRET, (err, data) => {
-		console.log(err, data);
 		if (err) res.status(403).send({ error: 'Invalid token' });
 		//@ts-ignore
 		User.findOne({ email: data.email })
